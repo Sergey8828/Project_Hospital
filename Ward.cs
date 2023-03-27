@@ -12,7 +12,8 @@ namespace CA1
         public string Name { get; set; }
         public int Capacity { get; set; }
 
-     
+        public List<Patient> Patients{ get; set; }
+
 
         public Ward()
         {

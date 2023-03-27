@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="402" Width="920"
         Loaded="Window_Loaded">
-    <Grid Margin="10,-13,-10,13">
+    <Grid Margin="10,-13,-10,13" ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -86,9 +86,9 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <StackPanel Grid.Column="3" Grid.Row="1"  >
-            <Button x:Name="btnLoad" Grid.Column="3" Grid.Row="1"  Content="Load" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,110,0,10"  Width="39" Click="btnLoad_Click"/>
-            <Button x:Name="btnSave" Grid.Column="3" Grid.Row="1" Content="Save" HorizontalAlignment="Center"  VerticalAlignment="Bottom"  Width="39" Click="btnSave_Click"/>
+        <StackPanel Grid.Column="3" Grid.Row="1" VerticalAlignment="Bottom">
+            <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Width="39" Click="btnLoad_Click" Margin="5"/>
+            <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Width="39" Click="btnSave_Click" Margin="5"/>
         </StackPanel>
     </Grid>
 </Window>

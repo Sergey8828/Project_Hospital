@@ -25,7 +25,7 @@ namespace CA1
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        List<Ward> wards = new List<Ward>();
 
 
         public MainWindow()
@@ -35,7 +35,8 @@ namespace CA1
 
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            //textBox.Text = String.Format("{0:F0", slider.Value);
+            string s = String.Format("{0:F0}", slider.Value);
+            TxtBoxCapacity.Text = "Capacity " + s;
         }
 
         // startup code
@@ -50,7 +51,7 @@ namespace CA1
             Ward w1 = new Ward() { Name = "Marx Brothers Ward", Capacity = 3};
             Ward w2 = new Ward() { Name = "Adams Family Ward", Capacity = 7};
 
-            List<Ward> wards = new List<Ward>();
+           
 
             // add to collection
             wards.Add(w1);
@@ -60,9 +61,9 @@ namespace CA1
             lbxWards.ItemsSource = wards;
 
             //create 3 wards objects
-            Patient p1 = new Patient() { Name = "Chico", Age = 67, BloodType = "A" };
-            Patient p2 = new Patient() { Name = "Graucho", Age = 57, BloodType = "AB" };
-            Patient p3 = new Patient() { Name = "Harpo", Age = 46, BloodType = "B" };
+            Patient p1 = new Patient() { Name = "Chico", DOB = new DateTime(1975,01,15), BloodType = "A" };
+            Patient p2 = new Patient() { Name = "Graucho", DOB = new DateTime(1975, 01, 15), BloodType = "AB" };
+            Patient p3 = new Patient() { Name = "Harpo", DOB = new DateTime(1975, 01, 15), BloodType = "B" };
 
             List <Patient> patients = new List<Patient>();
 
@@ -76,11 +77,11 @@ namespace CA1
             lbxPatients.ItemsSource = patients;
 
 
-            int Age = DateTime.Today.Year - DatePicker.Value.Year; 
+            
             
             // CurrentYear - BirthDate
 
-            txtAge.Text = Age.ToString();
+
         }
 
 
@@ -89,13 +90,13 @@ namespace CA1
         {
             //read info from screen
             string name = tbxName.Text;
-            int capacity = slider.Value;
+            //int capacity = slider.Value;
 
             //create ward object with info
-            Ward newWard = new Ward() { Name = name, Capacity = capacity};
+            Ward newWard = new Ward() { Name = name, Capacity = 1};
 
             //add to collection
-            wards.Add(newWard);
+            //wards.Add(newWard);
             //lbxWards.Text = GetTotalWages().ToString();
         }
 
@@ -106,14 +107,18 @@ namespace CA1
             {
                 //read info from screen
                 string name = txtboxName.Text;
-                int age = dpAge.SelectedDate.Value;
-                string bloodType =   ;
+
+                //Reading date from screen
+                DateTime dob = DatePicker.SelectedDate.Value;
+
+                //int age = dpAge.SelectedDate.Value;
+                //string bloodType =   ;
 
                 //create object with info
-                Patient newPatient = new Patient() { Name = name, Age = DateTime.Now-dob, BloodType = bloodType};
+                //Patient newPatient = new Patient() { Name = name, Age = DateTime.Now-dob, BloodType = bloodType};
 
                 //add to collection
-                patients.Add(newPatient);
+                //patients.Add(newPatient);
                 //tblkTotalWages.Text = GetTotalWages().ToString();
 
             }
@@ -141,15 +146,15 @@ namespace CA1
         {
             //connect to a file 
             using (StreamReader sr = new StreamReader(@"c:\temp\wards.json"))
-
+            {
                 //read text
                 string json = sr.ReadToEnd();
 
-            //convert from json to objects 
-            wards = JsonConvert.DeserializeObject<ObservableCollection<Ward>>(json);
-
+                //convert from json to objects 
+                wards = JsonConvert.DeserializeObject<List<Ward>>(json);
+            }
             //refresh  the display
-            lbxWards.Items.SourceCollection = wards;
+            lbxWards.ItemsSource = wards;
         
         }
     }

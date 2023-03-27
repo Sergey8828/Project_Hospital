@@ -5,41 +5,80 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CA1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="402" Width="901">
+        Title="MainWindow" Height="402" Width="920"
+        Loaded="Window_Loaded">
     <Grid Margin="10,-13,-10,13">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="Auto"/>
-
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <GridSplitter HorizontalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1"/>
 
-        <Expander Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Height="170" Header="Add new ward"  VerticalAlignment="Top" Width="285" IsExpanded="True">
-            <StackPanel>
-                <TextBox x:Name="TxtBoxCapacity" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" BorderBrush="White" TextWrapping="Wrap" Text="Capacity" VerticalAlignment="Top" Width="76"/>
-                <Slider HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
-                <Button x:Name="btnAddWard" Content="Add Ward" Width="70"/>
+        <GridSplitter HorizontalAlignment="Stretch" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"/>
+
+        <!--Column Wards-->
+
+        <TextBox x:Name="TxtboxWard" Margin="20,20,20,0" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" BorderBrush="White" TextWrapping="Wrap" Text="Ward List (2)" VerticalAlignment="Top"  Width="300" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="LawnGreen" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <ListBox x:Name="lbxWards" Margin="25,80,25,25" />
+        <Expander Grid.Column="0" Grid.Row="1" Margin="20,0,20,0" HorizontalAlignment="Left" Header="Add new ward"  VerticalAlignment="Top"  IsExpanded="True">
+            <StackPanel Width="340">
+                <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,10,20" VerticalAlignment="Top"/>
+                <TextBox x:Name="tbxName" TextWrapping="Wrap" Width="140" Margin="80,-40,0,20"/>
+
+                <TextBox x:Name="TxtBoxCapacity" HorizontalAlignment="Left" Margin="10,0,0,0" BorderBrush="White" TextWrapping="Wrap" Text="Capacity" VerticalAlignment="Top" Width="76"/>
+                <Slider x:Name="slider" 
+                HorizontalAlignment="Left"
+                Margin="140,-20,0,20"
+                VerticalAlignment="Top" Width="120"
+                TickPlacement="TopLeft"
+                ValueChanged="slider_ValueChanged"
+                SmallChange="1"/>
+                <Button x:Name="btnAddWard" Content="Add Ward" Margin="40,10,0,10" Width="70" Click="btnAddWard_Click"/>
             </StackPanel>
         </Expander>
 
-        <Expander Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Height="205" Header="Add new patient" VerticalAlignment="Top" Width="284" IsExpanded="True" RenderTransformOrigin="0.732,0.347">
-            <StackPanel>
-                <TextBox x:Name="txtboxName" HorizontalAlignment="Left" Margin="175,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <!--Column Patients-->
 
-                <TextBox TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox x:Name="TxtBoxPatients" Margin="20,20,20,0"  Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" BorderBrush="White" TextWrapping="Wrap" Text="Patients" VerticalAlignment="Top" Width="300" FontSize="18" FontWeight="Bold" Height="45" VerticalContentAlignment="Center">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="LawnGreen" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <ListBox x:Name="lbxPatients"  Grid.Row="0" Grid.Column="2" Margin="25,80,25,25"/>
+        <Expander Grid.Column="2" Margin="20,0,0,0" Grid.Row="1" HorizontalAlignment="Left" Header="Add new patient" VerticalAlignment="Top" IsExpanded="True">
+            <StackPanel>
+                <Label Content="Name" Margin="20,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtboxName" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="100,-20,10,0" Width="180"/>
+                <Label Content="DOB" Margin="20,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <DatePicker x:Name="DatePicker" Margin="100,-20,30,20" Width="180" />
+                <Label Content="Blood type" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <RadioButton Grid.Column="1" Grid.Row="1"  Content="A" Margin="-30,-20,10,10"  HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                <RadioButton Grid.Column="1" Grid.Row="1"  Content="B" Margin="30,-25,-10,10" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                <RadioButton Grid.Column="1" Grid.Row="1"  Content="AB" Margin="120,-25,-10,10" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                <RadioButton Grid.Column="1" Grid.Row="1"  Content="O"  Margin="210,-25,-10,10" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+                <Button x:Name="btnAddPatients" Content="Add Patient" Width="180" Margin="80,0,10,10" Click="btnAddPatients_Click" />
             </StackPanel>
         </Expander>
-        <Button Grid.Column="2" Grid.Row="1" Content="Load" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="39" Margin="0,150,0,0"/>
-        <Button Grid.Column="2" Grid.Row="1" Content="Save" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="39" Margin="0,185,0,0"/>
-        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtBoxDetails" Grid.Column="2" BorderBrush="White" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" TextAlignment="Left"  Width="140" Height="45" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Opacity="0.8">
+
+        <!--Column Details-->
+
+        <TextBox x:Name="TxtBoxDetails" Margin="10,20,20,0"  Grid.Row="0" Grid.Column="3" BorderBrush="White" TextWrapping="Wrap" Text="Details" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Left"  Width="160" Height="45" FontWeight="Bold" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Opacity="0.8">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="LawnGreen" Offset="1"/>
@@ -47,24 +86,9 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="TxtboxWard" HorizontalAlignment="Right" BorderBrush="White" TextWrapping="Wrap" Text="Ward List (2)" VerticalAlignment="Top" Width="292" Height="45" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="LawnGreen" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox x:Name="TxtBoxPatients" Grid.Column="1" HorizontalAlignment="Left" BorderBrush="White" TextWrapping="Wrap" Text="Patients" VerticalAlignment="Top" Width="294" FontSize="18" FontWeight="Bold" Height="45" VerticalContentAlignment="Center">
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White"/>
-                    <GradientStop Color="LawnGreen" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <TextBlock x:Name="tblkWards" Grid.Column="0" Grid.Row="0" Margin="0,55,10,10"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="233"/>
-        <TextBlock x:Name="tblkPatients" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Height="120" Width="294" Margin="0,55,10,10"/>
-
+        <StackPanel Grid.Column="3" Grid.Row="1"  >
+            <Button x:Name="btnLoad" Grid.Column="3" Grid.Row="1"  Content="Load" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Margin="0,110,0,10"  Width="39" Click="btnLoad_Click"/>
+            <Button x:Name="btnSave" Grid.Column="3" Grid.Row="1" Content="Save" HorizontalAlignment="Center"  VerticalAlignment="Bottom"  Width="39" Click="btnSave_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

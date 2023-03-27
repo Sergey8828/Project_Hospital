@@ -12,22 +12,15 @@ namespace CA1
         public string Name { get; set; }
         public int Capacity { get; set; }
 
-        public List<Patient> Patients { get; set; }
+     
 
         public Ward()
         {
             Name = string.Empty;
             //Capacity = "";
-            Patients = new List<Patient>(); 
+            Patients = new List<Patient>();
         }
     }
-
-
-    public class Patient
-    {
-        public string Name { get; set; }
-        public DateTime DOB { get; set; }
-        public string BloodType { get; set; }
-    }
 }
+
 

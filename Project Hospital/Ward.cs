@@ -19,10 +19,10 @@ namespace CA1
         public ObservableCollection<Patient> Patients { get; set; } = new ObservableCollection<Patient>();
 
         // zero constructor
-        public Ward() { }
+        public Ward()
+        { }
 
-
-        //contsructor
+        //constructor
         public Ward (string name, int capacity)
         {
             Name = name;    

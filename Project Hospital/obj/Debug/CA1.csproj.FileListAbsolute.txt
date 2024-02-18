@@ -1,0 +1,38 @@
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\bin\Debug\CA1.exe.config
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\bin\Debug\CA1.exe
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\bin\Debug\CA1.pdb
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.csproj.AssemblyReference.cache
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.csproj.SuggestedBindingRedirects.cache
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\MainWindow.g.cs
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\App.g.cs
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1_MarkupCompile.cache
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1_MarkupCompile.lref
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\MainWindow.baml
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.g.resources
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.Properties.Resources.resources
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.csproj.GenerateResource.cache
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.csproj.CoreCompileInputs.cache
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.exe
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.pdb
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\S00242123\oosd\Semester2\CA1\CA1\obj\Debug\CA1.csproj.CopyComplete
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\bin\Debug\CA1.exe.config
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\bin\Debug\CA1.exe
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\bin\Debug\CA1.pdb
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.csproj.AssemblyReference.cache
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.csproj.SuggestedBindingRedirects.cache
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\MainWindow.g.cs
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\App.g.cs
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1_MarkupCompile.cache
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1_MarkupCompile.lref
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\MainWindow.baml
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.g.resources
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.Properties.Resources.resources
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.csproj.GenerateResource.cache
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.csproj.CoreCompileInputs.cache
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.csproj.CopyComplete
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.exe
+C:\Users\S00242123\Downloads\CA1  Mukosiei Serhii\CA1\CA1\obj\Debug\CA1.pdb
